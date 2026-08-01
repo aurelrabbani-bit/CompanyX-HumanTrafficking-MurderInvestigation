@@ -188,71 +188,73 @@ The investigation follows a standard digital forensic workflow:
 
 ## Repository Structure
 
-```bash
-operation-x-forensics/
+```
+CompanyX-HumanTrafficking-MurderInvestigation/
 │
 ├─ README.md
 ├─ report/
-│  ├─ Final_Forensic_Report.pdf
-│  ├─ Executive_Summary.md
-│  └─ References.md
+│ └─ (final report to be added)
 │
 ├─ presentation/
-│  └─ Operation_X_Forensic_Presentation.pptx
+│ └─ (presentation file to be added)
 │
 ├─ evidence-notes/
-│  ├─ chain_of_custody.md
-│  ├─ evidence_inventory.md
-│  └─ investigation_log.md
+│ └─ (chain of custody / inventory notes to be added)
 │
 ├─ disk-analysis/
-│  ├─ image-verification/
-│  │  ├─ hashes.txt
-│  │  └─ image_details.md
-│  │
-│  ├─ filesystem-review/
-│  │  ├─ partition_notes.md
-│  │  ├─ user_profile_artifacts.md
-│  │  └─ suspicious_directories.md
-│  │
-│  ├─ recovered-files/
-│  │  ├─ deleted-documents/
-│  │  ├─ deleted-emails/
-│  │  ├─ hidden-files/
-│  │  └─ encrypted-files/
-│  │
-│  ├─ steganography/
-│  │  ├─ image_analysis.md
-│  │  └─ extracted_payloads/
-│  │
-│  └─ timeline/
-│     └─ timeline_of_activity.md
+│ ├─ image-verification/
+│ │
+│ ├─ filesystem-review/
+│ │ ├─ $I30
+│ │ └─ ${...}.Metadata
+│ │
+│ ├─ recovered-files/
+│ │ ├─ deleted-documents/ (8 recovered files)
+│ │ ├─ deleted-emails/ (4 recovered emails)
+│ │ ├─ hidden-files/ (9 sensitive/incriminating recovered files)
+│ │ ├─ encrypted-files/ (encrypted.zip, decryption notes)
+│ │ └─ Export.zip (raw Autopsy export bundle)
+│ │
+│ ├─ steganography/
+│ │ ├─ extracted_payloads/ (decoded output, PGP keys)
+│ │ ├─ HiddenMessage.bmp
+│ │ ├─ safehouse_location.bmp
+│ │ └─ image_analysis.md
+│ │
+│ └─ timeline/
 │
 ├─ network-analysis/
-│  ├─ pcap-overview.md
-│  ├─ suspicious-connections.md
-│  ├─ ftp-http-transfers.md
-│  ├─ tor-related-activity.md
-│  ├─ crypto-transaction-leads.md
-│  └─ extracted-objects/
+│ ├─ Daniel_Network.pcap
+│ ├─ pcap-overview.md
+│ ├─ suspicious-connections.md
+│ ├─ ftp-http-transfers.md
+│ ├─ tor-related-activity.md
+│ ├─ crypto-transaction-leads.md
+│ └─ extracted-objects/ (client list, invoice, shipment list, contacts)
 │
 ├─ findings/
-│  ├─ key-findings.md
-│  ├─ evidence-correlation.md
-│  ├─ suspect-link-analysis.md
-│  └─ charge-assessment.md
+│ └─ (analysis & correlation write-ups — key-findings.md, evidence-correlation.md, etc. to be added)
 │
 ├─ screenshots/
-│  ├─ autopsy/
-│  ├─ wireshark/
-│  ├─ steghide/
-│  └─ recovered-artifacts/
+│ ├─ autopsy/
+│ ├─ wireshark/ (29 screenshots)
+│ ├─ steghide/ (26 screenshots)
+│ ├─ decryption/ (8 screenshots)
+│ ├─ disk_image/ (1 screenshot)
+│ ├─ network/
+│ ├─ steganography/
+│ └─ recovered-artifacts/ (17 screenshots)
 │
 └─ scripts/
-   ├─ hash_verification/
-   ├─ timeline_helpers/
-   └─ parsing_helpers/
+├─ hash_verification/
+├─ timeline_helpers/
+├─ parsing_helpers/
+├─ custom_wordlist.txt
+└─ extract.py
 ```
+
+
+> **Note:** `findings/` is reserved for analysis write-ups and conclusions (markdown reports). Raw recovered evidence — documents, emails, images — lives under `disk-analysis/recovered-files/` and `network-analysis/extracted-objects/`, categorized by type.
 
 ---
 
@@ -346,7 +348,7 @@ This repository is created for **digital forensic education, investigation simul
 
 ## Status
 
-**Project status:** In progress
+**Project status:** Completed
 **Case type:** Digital Forensic Investigation
 **Focus areas:** Disk Forensics, Network Forensics, Deleted File Recovery, Steganography, Encryption Analysis, Evidence Correlation
 
